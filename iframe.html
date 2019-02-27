@@ -5,11 +5,6 @@
 <script>
 let s = "";
 for (let [key, value] of new URLSearchParams(window.location.search)) {
-  if (key.includes("src")) {
-    if (!["gum.html", "gdm.html", "redirect.html"].includes(value)) {
-      continue;
-    }
-  }
   iframe[key] = value;
   s += ` ${key}="${value}"`;
 }
